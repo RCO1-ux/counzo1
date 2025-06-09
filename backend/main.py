@@ -9,16 +9,16 @@ import lib.history_google_chat as chat
 
 app = FastAPI()
 
-origins = [
-    "http://10.0.2.2:8000",
-    "http://localhost:5500",
-    #"http://127.0.0.1:5500",
-    #"http://10.0.2.2",  # Covers requests without a port
-]
+# origins = [
+#     "http://10.0.2.2:8000",
+#     "http://localhost:5500",
+#     #"http://127.0.0.1:5500",
+#     #"http://10.0.2.2",  # Covers requests without a port
+# ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins, #["*"], 
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["POST", "OPTIONS"],
     allow_headers=["*"], # Allow common headers

@@ -26,7 +26,7 @@ class _ChatPageState extends State<ChatPage> {
       _isLoading = true;
     });
 
-    final url = Uri.parse("http://127.0.0.1:8000/chat"); // Replace with your actual backend URL
+    final url = Uri.parse("https://counzotill.onrender.com/chat"); // Replace with your actual backend URL
     final headers = {'Content-Type': 'application/json', 'Accept': 'application/json'};
     final body = json.encode({'prompt': message});
 
